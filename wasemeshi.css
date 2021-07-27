@@ -1,0 +1,199 @@
+.header{background-color:#b22222;
+  width:100%;
+  float:left;}
+  .header h1{color:#ffffff;
+  font-size:50px;
+  float:left;
+  padding-left:40px;
+  font-family:'HG行書体';}
+  .menu  a{display: inline-block;
+  font-size:30px;
+  color:#ffffff;
+  padding-top:25px;
+  list-style:none;
+  font-family:'HG行書体';
+  text-decoration: none;
+  padding-left: 40px;
+  }
+  .container{
+    background-color: teal;
+    position: relative;
+    z-index:30;
+  }
+  .menu li{
+    list-style:none;
+    float: left;
+  }
+  .menu li a.active{
+    color:black;
+  }
+  .content.active {
+    font-family:'HG行書体';
+    color:black;
+    display:block;
+  }
+  .menu li a:not(.active):hover{
+    opacity:0.5;
+    transition:opacity 0.4s;
+  }
+  .content {
+    display: none;
+    font-family:'HG行書体';
+    color:white;
+   
+  }
+  .copy-contentes{
+  height:750px;
+  width:100%;
+  text-align:center;
+  background-image:url(https://free-materials.com/adm/wp-content/uploads/2016/12/adtDSC_5442-750x499.jpg);
+  background-size: cover;
+background-position: top 100px,center;}
+  
+  .copy-contentes p{
+  font-family:'SimSun';
+  color:#fffafa;
+  font-size:75px;
+  padding-top:50px;
+  }
+  
+  .copy-contentes span{
+  font-family:'SimSun';
+  color:#ff6347;
+  font-size:75px;
+  padding-top:70px;
+  }
+  
+  h2{
+  background-color:#1f3134;
+  color:#fef4f4;
+  font-family:"HG正楷書体-PRO";}
+  
+  #target1{
+    width :550px;
+    height:200px;
+  }
+ 
+ 
+
+  
+  
+  #open :hover{
+    opacity:0.5;
+    cursor:pointer;
+  }
+  #modal>h1{
+    font-family:'HG行書体';
+    font-size: 40px;
+    margin:0 0 20px;
+  }
+  
+  #close{
+    cursor: pointer;
+    width:200px;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    padding: 12px 0;
+    margin: 16px auto;
+  }
+  #mask{
+    background: rgba(0,0,0,0.4);
+    position: fixed;
+    top:0px;
+    bottom:0;
+    right:0;
+    left:0;
+  }
+  #modal{
+    background:#fff ;
+    width:300px;
+    padding:20px;
+    border-radius: 4px;
+    position: absolute;
+    top:600px;
+    left: 0px;
+    right: 0px;
+    margin:0 auto;
+    transition: transform 0.4s;
+  }
+  .heart{
+    font-size: 30px;
+    color: #e4e4e4;
+    user-select: none;
+  }
+  .like [type="checkbox"]:checked~.heart{
+    animation-name: heart;
+    animation-duration: .6s;
+    animation-fill-mode: forwards;
+  }
+  .like [type="checkbox"]{
+    display: none;
+  }
+  @keyframes heart {
+    0%{
+      transform: scale(0);
+    }
+    50%{
+      transform: scale(1.1);
+    }
+    100%{
+      transform: scale(1);
+      color:red;
+    }
+  }
+  #mask.hidden{
+    display: none;
+  }
+  #modal.hidden{
+    transform:translate(-1000px,0) ;
+  }
+  
+  #open2 :hover{
+    opacity:0.5;
+    cursor:pointer;
+  }
+  #modal2>h1{
+    font-family:'HG行書体';
+    font-size: 40px;
+    margin:0 0 20px;
+  }
+  
+  #close2{
+    cursor: pointer;
+    width:200px;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    padding: 12px 0;
+    margin: 16px auto;
+  }
+  #mask2{
+    background: rgba(0,0,0,0.4);
+    position: fixed;
+    top:0px;
+    bottom:0;
+    right:0;
+    left:0;
+  }
+  #modal2{
+    background:#fff ;
+    width:300px;
+    padding:20px;
+    border-radius: 4px;
+    position: absolute;
+    top:600px;
+    left: 0px;
+    right: 0px;
+    margin:0 auto;
+    transition: transform 0.4s;
+  }
+  #mask2.hidden{
+    display: none;
+  }
+  #modal2.hidden{
+    transform:translate(-1000px,0) ;
+  }
+ .flex{display:flex;
+
+  }

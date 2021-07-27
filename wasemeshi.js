@@ -22,19 +22,24 @@ menuItems.forEach(clickedItem=>{
   const close=document.getElementById("close");
   const modal=document.getElementById("modal");
   const mask =document.getElementById("mask");
-
+ 
+  const add = function (somthing,anything){
+    somthing.classList.add("hidden");
+    anything.classList.add("hidden");};
+  
+  const remove = function (x,y){
+    x.classList.remove("hidden");
+    y.classList.remove("hidden")
+  }
 
 open.addEventListener("click",()=>{
-     modal.classList.remove("hidden");
-     mask.classList.remove("hidden");
+   remove(modal,mask);
 });
 close.addEventListener("click",()=>{
-  modal.classList.add("hidden");
-  mask.classList.add("hidden");
+  add(modal,mask);
 });
 mask.addEventListener("click",()=>{
-  modal.classList.add("hidden");
-  mask.classList.add("hidden");
+   add(modal,mask);
 });
 const open2=document.getElementById("open2");
   const close2=document.getElementById("close2");
@@ -43,15 +48,12 @@ const open2=document.getElementById("open2");
 
 
 open2.addEventListener("click",()=>{
-     modal2.classList.remove("hidden");
-     mask2.classList.remove("hidden");
+    remove(modal2,mask2);
 });
 close2.addEventListener("click",()=>{
-  modal2.classList.add("hidden");
-  mask2.classList.add("hidden");
+   add(modal2,mask2);
 });
 mask2.addEventListener("click",()=>{
-  modal2.classList.add("hidden");
-  mask2.classList.add("hidden");
+  add(modal2,mask2);
 });
 }

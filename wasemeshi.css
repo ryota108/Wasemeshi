@@ -74,21 +74,17 @@ background-position: top 100px,center;}
     height:200px;
   }
  
- 
-
-  
-  
-  #open :hover{
+  #open :hover,#open2:hover, #open3 :hover{
     opacity:0.5;
     cursor:pointer;
   }
-  #modal>h1{
+  #modal>h1, #modal2>h1,#modal3>h1{
     font-family:'HG行書体';
     font-size: 40px;
     margin:0 0 20px;
   }
   
-  #close{
+  #close,#close2,#close3{
     cursor: pointer;
     width:200px;
     border:1px solid #ccc;
@@ -97,7 +93,7 @@ background-position: top 100px,center;}
     padding: 12px 0;
     margin: 16px auto;
   }
-  #mask{
+  #mask,#mask2,#mask3{
     background: rgba(0,0,0,0.4);
     position: fixed;
     top:0px;
@@ -105,7 +101,7 @@ background-position: top 100px,center;}
     right:0;
     left:0;
   }
-  #modal{
+  #modal, #modal2,#modal3{
     background:#fff ;
     width:300px;
     padding:20px;
@@ -142,58 +138,12 @@ background-position: top 100px,center;}
       color:red;
     }
   }
-  #mask.hidden{
+  #mask.hidden,#mask2.hidden,#mask3.hidden{
     display: none;
   }
-  #modal.hidden{
+  #modal.hidden,#modal2.hidden,#modal3.hidden{
     transform:translate(-1000px,0) ;
   }
-  
-  #open2 :hover{
-    opacity:0.5;
-    cursor:pointer;
-  }
-  #modal2>h1{
-    font-family:'HG行書体';
-    font-size: 40px;
-    margin:0 0 20px;
-  }
-  
-  #close2{
-    cursor: pointer;
-    width:200px;
-    border:1px solid #ccc;
-    border-radius: 4px;
-    text-align: center;
-    padding: 12px 0;
-    margin: 16px auto;
-  }
-  #mask2{
-    background: rgba(0,0,0,0.4);
-    position: fixed;
-    top:0px;
-    bottom:0;
-    right:0;
-    left:0;
-  }
-  #modal2{
-    background:#fff ;
-    width:300px;
-    padding:20px;
-    border-radius: 4px;
-    position: absolute;
-    top:600px;
-    left: 0px;
-    right: 0px;
-    margin:0 auto;
-    transition: transform 0.4s;
-  }
-  #mask2.hidden{
-    display: none;
-  }
-  #modal2.hidden{
-    transform:translate(-1000px,0) ;
-  }
- .flex{display:flex;
 
-  }
+ .flex{display:flex;
+}

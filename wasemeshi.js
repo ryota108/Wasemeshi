@@ -18,42 +18,37 @@ menuItems.forEach(clickedItem=>{
 
   });
 });
-  const open=document.getElementById("open");
-  const close=document.getElementById("close");
-  const modal=document.getElementById("modal");
-  const mask =document.getElementById("mask");
- 
-  const add = function (somthing,anything){
-    somthing.classList.add("hidden");
-    anything.classList.add("hidden");};
-  
-  const remove = function (x,y){
-    x.classList.remove("hidden");
-    y.classList.remove("hidden")
+class Modal{
+  constructor(open,close,modal,mask){
+  this.opens =document.getElementById(open);
+  this.closes =document.getElementById(close);
+  this.modals =document.getElementById(modal);
+  this.masks =document.getElementById(mask);
   }
+  toggleOpen(){
+        this.opens.addEventListener("click",()=>{
+        this.modals.classList.toggle("hidden");
+          this.masks.classList.toggle("hidden");
+        })
+      }
+  toggleClose(){
+      this.closes.addEventListener("click",()=>{
+      this.modals.classList.toggle("hidden");
+       this.masks.classList.toggle("hidden");
+    })
+  }
+}
 
-open.addEventListener("click",()=>{
-   remove(modal,mask);
-});
-close.addEventListener("click",()=>{
-  add(modal,mask);
-});
-mask.addEventListener("click",()=>{
-   add(modal,mask);
-});
-const open2=document.getElementById("open2");
-  const close2=document.getElementById("close2");
-  const modal2=document.getElementById("modal2");
-  const mask2 =document.getElementById("mask2");
+const modalFirst = new Modal("open","close","modal","mask")
+modalFirst.toggleOpen()
+modalFirst.toggleClose()
+
+const modalSecond =new Modal("open2","close2","modal2","mask2")
+modalSecond.toggleOpen()
+modalSecond.toggleClose()
 
 
-open2.addEventListener("click",()=>{
-    remove(modal2,mask2);
-});
-close2.addEventListener("click",()=>{
-   add(modal2,mask2);
-});
-mask2.addEventListener("click",()=>{
-  add(modal2,mask2);
-});
+const modalThird =new Modal("open3","close3","modal3","mask3")
+modalThird.toggleOpen()
+modalThird.toggleClose()
 }

@@ -6,6 +6,7 @@
       rel="stylesheet">
   <link rel="stylesheet" href="wasemeshi.css">
 
+
 </head>
 <body>
 <div class="header">
@@ -36,71 +37,430 @@
   
 </div>
 <h2>店舗一覧</h2>
+<div class="filters"> <!-- input 要素のグループを div 要素で囲む -->
+  <input type="radio" name="categories" id="All" value="All" checked>
+  <label for="All"> All </label>
+  <input type="radio" name="categories" id="noodle" value="noodle">
+  <label for="noodle"> 麺類 </label>
+  <input type="radio" name="categories" id="meat" value="meat">
+  <label for="meat"> お肉 </label>
+  <input type="radio" name="categories" id="fish" value="fish">
+  <label for="fish"> 海鮮</label>
+  <input type="radio" name="categories" id="cafe" value="cafe">
+  <label for="cafe">カフェ </label>
+  <input type="radio" name="categories" id="bread" value="bread">
+  <label for="bread"> パン屋</label>
+  <input type="radio" name="categories" id="waseda" value="waseda">
+  <label for="waseda"> 早稲田</label>
+  <input type="radio" name="categories" id="takadanobaba" value="takadanobaba">
+  <label for="takadanobaba">高田馬場</label>
+</div>
 <div class="flex">
-<div id="open">
-  <img src="https://komoromoro.com/wp-content/uploads/2020/04/donmaru-15.jpg"alt="丼丸" width="200" height="200">
-</div>
-<div id="mask" class="hidden">
+<ul  class="targets flex">
+<li class="target" data-category="fish waseda">  <div id="open" class="open-class">
+     <img src="https://komoromoro.com/wp-content/uploads/2020/04/donmaru-15.jpg"alt="丼丸" width="200" height="200">
+    </div>
+    <div id="mask" class="hidden mask">
 
-</div>
-<section id="modal" class="hidden">
-    <h1>丼丸</h1>
+    </div>
+   <section id="modal" class="hidden modal">
+    <h1 class="title">丼丸</h1>
     <p>海鮮丼のテイクアウト専門店。メニューはバラエティー豊かでなんと７２種類の海鮮丼が食べられる</p>
-    <a href="https://sasafune.co.jp" target="_blank">HPはこちら</a>
+    <a href="https://sasafune.co.jp" target="_blank">詳しくはこちら</a>
     <iframe width="300" height="150" src="https://www.youtube.com/embed/ymLl_mGkBKA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <label class="like">
       <input type="checkbox">
       <span class="material-icons heart">
         favorite
       </span>
-      <div id="close">
+      <div id="close" class="close-class">
         閉じる
       </div>
     </section>
-    <div id="open2">
+  </li>
+  
+  <li class="target" data-category="meat waseda">
+     <div id="open2" class="open-class">
       <img src="https://images.keizai.biz/kyobashi_keizai/headline/1569462988_photo.jpg" alt="" width="200px" height="200px">
     </div>
-    <div id="mask2" class="hidden">
+    <div id="mask2" class="hidden mask">
       
     </div>
-    <section id="modal2" class="hidden">
-      <h1> 焼肉ライク</h1>
+    <section id="modal2" class="hidden modal">
+      <h1 class="title"> 焼肉ライク</h1>
       <p>焼肉が友達とも一人でもどちらでも楽しめる本格焼肉店、なんと580円から焼肉が楽しめる！</p>
-      <a href="https://www.yakiniku-like.com/" target="_blank">HPはこちら</a>
+      <a href="https://www.yakiniku-like.com/" target="_blank">詳しくはこちら</a>
       <iframe width="300" height="150" src="https://www.youtube.com/embed/Y1x1BDUZoBI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <label class="like">
         <input type="checkbox">
         <span class="material-icons heart">
           favorite
         </span>
-        <div id="close2">
+        <div id="close2" class="close-class">
           
           閉じる
         </div>
       </section>
-     <div id="open3">
+  </li>
+
+       <li class="target" data-category="noodle west-waseda">
+     <div id="open3" class="open-class">
         <img src="https://tblg.k-img.com/restaurant/images/Rvw/63440/63440047.jpg" alt="" width="200px" height="200px">
       </div>
-      <div id="mask3" class="hidden">
+      <div id="mask3" class="hidden mask">
         
       </div>
-    <section id="modal3" class="hidden">
-      <h1> 東京麺珍亭本舗</h1>
-      <p>早稲田生なら一度は食べるべき、中には三食麺珍の強者も！？</p>
-      <a href="https://menchintei.jp/" target="_blank">HPはこちら</a>
-      <iframe width="300" height="150" src="https://www.youtube.com/embed/GRe05KW_Pxw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <label class="like">
-        <input type="checkbox">
-        <span class="material-icons heart">
-          favorite
-        </span>
-        <div id="close3">
 
-          閉じる
-        </div>
-      </section>
+      <section id="modal3" class="hidden modal">
+        <h1 class="title"> 東京麺珍亭本舗</h1>
+        <p>早稲田生なら一度は食べるべき、中には三食麺珍の強者も！？</p>
+        <a href="https://menchintei.jp/" target="_blank">詳しくはこちら</a>
+        <iframe width="300" height="150" src="https://www.youtube.com/embed/GRe05KW_Pxw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <label class="like">
+          <input type="checkbox">
+          <span class="material-icons heart">
+            favorite
+          </span>
+          <div id="close3" class="close-class">
+  
+            閉じる
+          </div>
+        </section>
+    </li>
+    
+    <li class="target" data-category="meat">  <div id="open4" class="open-class">
+      <img src="https://tblg.k-img.com/restaurant/images/Rvw/145235/640x640_rect_145235071.jpg"alt="丼丸" width="200" height="200">
+     </div>
+     <div id="mask4" class="hidden mask">
+ 
+     </div>
+    <section id="modal4" class="hidden modal">
+     <h1 class="title">キッチンオトボケ</h1>
+     <p>紹介文</p>
+     <a href="https://www.syokuraku-web.com/bar-restaurant/31535/" target="_blank">詳しくはこちら</a>
+     <iframe width="300" height="150" src="https://www.youtube.com/embed/fNX0TTK7vDI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     <label class="like">
+       <input type="checkbox">
+       <span class="material-icons heart">
+         favorite
+       </span>
+       <div id="close4" class="close-class">
+         閉じる
+       </div>
+     </section>
+   </li>
+
+    <li class="target" data-category="meat">  <div id="open5" class="open-class">
+      <img src="https://tblg.k-img.com/restaurant/images/Rvw/119476/640x640_rect_119476379.jpg"alt="丼丸" width="200" height="200">
+     </div>
+     <div id="mask5" class="hidden  mask">
+ 
+     </div>
+    <section id="modal5" class="hidden modal">
+     <h1 class="title">どんぴしゃり</h1>
+     <p>紹介文</p>
+     <a href="https://www.waseda.jp/inst/weekly/report/2017/05/25/25993/" target="_blank">詳しくはこちら</a>
+     <iframe width="300" height="150" src="https://www.youtube.com/embed/u6NPQDYfBHU?start=252" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     <label class="like">
+       <input type="checkbox">
+       <span class="material-icons heart">
+         favorite
+       </span>
+       <div id="close5" class="close-class">
+         閉じる
+       </div>
+     </section>
+   </li>
+
+    <li class="target" data-category="meat">  <div id="open6" class="open-class">
+      <img src="https://lh3.googleusercontent.com/proxy/OTfDjbAaJNCfdREbogPPd48IcdwCgUhe5UTERQxQFh1NYZysI93-is4oi5b2IQ3Mlc1wgmiNLl_ZFynnCJOQXqN4EleNAF8b4GSNEbXOlS-XNQ"alt="丼丸" width="200" height="200">
+     </div>
+     <div id="mask6" class="hidden mask">
+ 
+     </div>
+    <section id="modal6" class="hidden modal">
+     <h1 class="title">キッチンミキ</h1>
+     <p>紹介文</p>
+     <a href="https://twitter.com/kitchen_miki" target="_blank">詳しくはこちら</a>
+     <iframe width="300" height="150" src="https://www.youtube.com/embed/BBh4ndkqE6w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     <label class="like">
+       <input type="checkbox">
+       <span class="material-icons heart">
+         favorite
+       </span>
+       <div id="close6" class="close-class">
+         閉じる
+       </div>
+     </section>
+   </li>
+
+    <li class="target" data-category="meat">  <div id="open7" class="open-class">
+      <img src="https://assets.st-note.com/production/uploads/images/48202787/picture_pc_aad4934ebc00ed8b2c579c848636a860.jpg?width=800"alt="丼丸" width="200" height="200">
+     </div>
+     <div id="mask7" class="hidden  mask">
+ 
+     </div>
+    <section id="modal7" class="hidden modal">
+     <h1 class="title">牛めし三品</h1>
+     <p>紹介文</p>
+     <a href="https://twitter.com/sanpin_shokudo" target="_blank">詳しくはこちら</a>
+     <iframe width="300" height="150" src="https://www.youtube.com/embed/4d1BZQAZVd0?start=92" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     <label class="like">
+       <input type="checkbox">
+       <span class="material-icons heart">
+         favorite
+       </span>
+       <div id="close7" class="close-class">
+         閉じる
+       </div>
+     </section>
+   </li>
+
+    <li class="target" data-category="noodle">  <div id="open8" class="open-class">
+      <img src="https://pbs.twimg.com/profile_images/1233801777419436032/WazOUSzw_400x400.jpg"alt="丼丸" width="200" height="200">
+     </div>
+     <div id="mask8" class="hidden mask">
+ 
+     </div>
+    <section id="modal8" class="hidden modal">
+     <h1 class="title">武道家</h1>
+     <p>紹介文</p>
+     <a href="https://twitter.com/budoukawaseda01?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">詳しくはこちら</a>
+     <iframe width="300" height="150" src="https://www.youtube.com/embed/J6auYvzs1A0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     <label class="like">
+       <input type="checkbox">
+       <span class="material-icons heart">
+         favorite
+       </span>
+       <div id="close8" class="close-class">
+         閉じる
+       </div>
+     </section>
+   </li>
+
+    <li class="target" data-category="noodle">  <div id="open9" class="open-class">
+      <img src="https://tblg.k-img.com/restaurant/images/Rvw/127985/640x640_rect_127985058.jpg"alt="丼丸" width="200" height="200">
+     </div>
+     <div id="mask9" class="hidden mask">
+ 
+     </div>
+    <section id="modal9" class="hidden modal">
+     <h1 class="title">図星</h1>
+     <p>紹介文</p>
+     <a href="https://twitter.com/kokorobazuboshi?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">詳しくはこちら</a>
+     <iframe width="300" height="150" src="https://www.youtube.com/embed/BLJcBSeYVeM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     <label class="like">
+       <input type="checkbox">
+       <span class="material-icons heart">
+         favorite
+       </span>
+       <div id="close9" class="close-class">
+         閉じる
+       </div>
+     </section>
+   </li>
+
+    <li class="target" data-category="noodle">  <div id="open10" class="open-class">
+      <img src="https://tblg.k-img.com/restaurant/images/Rvw/55462/640x640_rect_55462224.jpg"alt="丼丸" width="200" height="200">
+     </div>
+     <div id="mask10" class="hidden mask">
+ 
+     </div>
+    <section id="modal10" class="hidden modal">
+     <h1 class="title">厳哲</h1>
+     <p></p>
+     <a href="https://twitter.com/gantetsu01?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">詳しくはこちら</a>
+     <iframe width="300" height="150" src="https://www.youtube.com/embed/oO92vi9cBqE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     <label class="like">
+       <input type="checkbox">
+       <span class="material-icons heart">
+         favorite
+       </span>
+       <div id="close10" class="close-class">
+         閉じる
+       </div>
+     </section>
+   </li> 
+    <li class="target" data-category="cafe">  <div id="open11" class="open-class">
+      <img src="https://www.gmc-waseda.com/menu/images/lu_03.jpg"width="200" height="200">
+     </div>
+     <div id="mask11" class="hidden mask">
+ 
+     </div>
+    <section id="modal11" class="hidden modal">
+     <h1 class="title">Good Morning CAFE</h1>
+     <p>紹介文</p>
+     <a href="https://gmc-waseda.com/" target="_blank">詳しくはこちら</a>
+     <iframe width="300" height="150" src="https://www.youtube.com/embed/G1QoDrP_2ak" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     <label class="like">
+       <input type="checkbox">
+       <span class="material-icons heart">
+         favorite
+       </span>
+       <div id="close11" class="close-class">
+         閉じる
+       </div>
+     </section>
+   </li> 
+   
+    <li class="target" data-category="bread">  <div id="open12" class="open-class">
+      <img src="https://365pan.club/wp-content/uploads/2017/03/bois_de_vincennes_04.jpg"width="200" height="200">
+     </div>
+     <div id="mask12" class="hidden mask">
+ 
+     </div>
+    <section id="modal12" class="hidden modal">
+     <h1 class="title">ボワ・ド・ヴァンセンヌ</h1>
+     <p>紹介文</p>
+     <a href="https://cake.tokyo/11374" target="_blank">詳しくはこちら</a>
+     <!-- 動画 -->
+     <label class="like">
+       <input type="checkbox">
+       <span class="material-icons heart">
+         favorite
+       </span>
+       <div id="close12" class="close-class">
+         閉じる
+       </div>
+     </section>
+   </li> 
+
+    <li class="target" data-category="cafe">  <div id="open13" class="open-class">
+      <img src="https://img.retty.me/img_ebisu/restaurant/100000030884/archive/2009064-5f8f956bbff76-l.png"width="200" height="200">
+     </div>
+     <div id="mask13" class="hidden mask">
+ 
+     </div>
+    <section id="modal13" class="hidden modal">
+     <h1 class="title">Le Cafe RETRO</h1>
+     <p>紹介文</p>
+     <a href="https://twitter.com/retro_staff" target="_blank">詳しくはこちら</a>
+     <iframe width="300" height="150" src="https://www.youtube.com/embed/XSVQVS9oBBM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     <label class="like">
+       <input type="checkbox">
+       <span class="material-icons heart">
+         favorite
+       </span>
+       <div id="close13" class="close-class">
+         閉じる
+       </div>
+     </section>
+   </li> 
+
+    <li class="target" data-category="bread">  <div id="open14" class="open-class">
+      <img src="https://gakumado.mynavi.jp/system/production/image/image/000/007/675/7675/wysiwyg_gmd_9fb8de633bdd60b6908a.jpg"width="200" height="200">
+     </div>
+     <div id="mask14" class="hidden mask">
+ 
+     </div>
+    <section id="modal14" class="hidden modal">
+     <h1 class="title">ミルクホール</h1>
+     <p>紹介文</p>
+     <a href="https://twitter.com/milkhallwaseda1" target="_blank">詳しくはこちら</a>
+     <!-- 動画 -->
+     <label class="like">
+       <input type="checkbox">
+       <span class="material-icons heart">
+         favorite
+       </span>
+       <div id="close14" class="close-class">
+         閉じる
+       </div>
+     </section>
+   </li> 
+
+    <li class="target" data-category="fish">  <div id="open15" class="open-class">
+      <img src="https://lh3.googleusercontent.com/proxy/phyyGAnvKf4-XBqdDMWfWYjuNbvYvBAzsYAr4FqjMdzFN8oLT3tYmu5jjxPXnnrrmv7BeDtYYyQ52md4uzZq5e71WENM_Bhj3T3gNBdo8Ra7rRKh7rhD6jJxViOQdc8J5wmSTu4dHWGw0QU4iCU"width="200" height="200">
+     </div>
+     <div id="mask15" class="hidden mask">
+ 
+     </div>
+    <section id="modal15" class="hidden modal">
+     <h1 class="title">食事処たかはし</h1>
+     <p>紹介文</p>
+     <a href="https://twitter.com/wsdtakahashi" target="_blank">詳しくはこちら</a>
+     <!-- 動画 -->
+     <label class="like">
+       <input type="checkbox">
+       <span class="material-icons heart">
+         favorite
+       </span>
+       <div id="close15" class="close-class">
+         閉じる
+       </div>
+     </section>
+   </li> 
+
+    <li class="target" data-category="cafe">  <div id="open16" class="open-class">
+      <img src="https://pbs.twimg.com/profile_images/924517221010874369/qMEMbO2i.jpg"width="200" height="200">
+     </div>
+     <div id="mask16" class="hidden mask">
+ 
+     </div>
+    <section id="modal16" class="hidden modal">
+     <h1 class="title">知るカフェ</h1>
+     <p>紹介文</p>
+     <a href="https://twitter.com/shirucafe03?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">詳しくはこちら</a>
+     <iframe width="300" height="150" src="https://www.youtube.com/embed/TcOXUs2jyAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     <label class="like">
+       <input type="checkbox">
+       <span class="material-icons heart">
+         favorite
+       </span>
+       <div id="close16" class="close-class">
+         閉じる
+       </div>
+     </section>
+   </li> 
+
+    <li class="target" data-category="cafe">  <div id="open17" class="open-class">
+      <img src="https://tblg.k-img.com/restaurant/images/Rvw/154994/640x640_rect_154994888.jpg"width="200" height="200">
+     </div>
+     <div id="mask17" class="hidden mask">
+ 
+     </div>
+    <section id="modal17" class="hidden modal">
+     <h1 class="title">10°CAFE</h1>
+     <p>紹介文</p>
+     <a href="https://judecafe.com/" target="_blank">詳しくはこちら</a>
+     <!-- 動画 -->
+     <label class="like">
+       <input type="checkbox">
+       <span class="material-icons heart">
+         favorite
+       </span>
+       <div id="close17" class="close-class">
+         閉じる
+       </div>
+     </section>
+   </li> 
+
+    <li class="target" data-category="cafe">  <div id="open18" class="open-class">
+      <img src="https://imgfp.hotp.jp/IMGH/44/26/P037944426/P037944426_480.jpg"width="200" height="200">
+     </div>
+     <div id="mask18" class="hidden mask">
+ 
+     </div>
+    <section id="modal18" class="hidden modal">
+     <h1 class="title">Whistle CAFE</h1>
+     <p>紹介文</p>
+     <a href="https://twitter.com/WhistleCAFE?s=21" target="_blank">詳しくはこちら</a>
+     <iframe width="300" height="150" src="https://www.youtube.com/embed/8Tx7FfFm_s4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     <label class="like">
+       <input type="checkbox">
+       <span class="material-icons heart">
+         favorite
+       </span>
+       <div id="close18" class="close-class">
+         閉じる
+       </div>
+     </section>
+   </li> 
+
+  </ul>
     <div id="target1"></div>
   
 <script src="wasemeshi.js"></script>
+<script src="wasemeshi-filter.js"></script>
   
 </body></html>

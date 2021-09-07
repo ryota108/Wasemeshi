@@ -20,7 +20,9 @@ body {
   text-decoration: none;
   padding-left: 40px;
   }
-
+li {
+  list-style: none;
+}
   .menu li{
     list-style:none;
     float: left;
@@ -76,27 +78,32 @@ body {
     width :550px;
     height:200px;
   }
- 
-  #open :hover,#open2:hover, #open3 :hover{
+  .open-class:hover{
     opacity:0.5;
     cursor:pointer;
   }
-  #modal>h1, #modal2>h1,#modal3>h1{
-    font-family:'HG行書体';
+
+  .title{ font-family:'HG行書体';
     font-size: 40px;
     margin:0 0 20px;
   }
-  
-  #close,#close2,#close3{
+  .close-class{
     cursor: pointer;
     width:200px;
-    border:1px solid #ccc;
-    border-radius: 4px;
+    border:1px solid black;
+    border-radius: 7px;
     text-align: center;
     padding: 12px 0;
     margin: 16px auto;
+    transition: all 0.3s;
+    font-weight: 600;
+    box-shadow: 2px 2px 4px 0 black;
   }
-  #mask,#mask2,#mask3{
+  .close-class:hover{
+    transform: translate(2px,2px);
+    box-shadow: none;}
+
+  .mask{
     background: rgba(0,0,0,0.4);
     position: fixed;
     top:0px;
@@ -104,18 +111,20 @@ body {
     right:0;
     left:0;
   }
-  #modal, #modal2,#modal3{
-    background:#fff ;
-    width:300px;
-    padding:20px;
-    border-radius: 4px;
-    position: absolute;
-    top:600px;
-    left: 0px;
-    right: 0px;
-    margin:0 auto;
-    transition: transform 0.4s;
-  }
+ .modal{
+  background:#fff ;
+  width:300px;
+  padding:20px;
+  border-radius: 4px;
+  position: fixed;
+  top:20%;
+  left: 0px;
+  right: 0px;
+  margin:0 auto;
+  transition: transform 0.4s;
+}
+
+
   .heart{
     font-size: 30px;
     color: #e4e4e4;
@@ -141,25 +150,67 @@ body {
       color:red;
     }
   }
-  #mask.hidden,#mask2.hidden,#mask3.hidden{
+  /* ラジオボタンを非表示に */
+input[type="radio"] {
+  position: absolute;
+  left: -9999px;
+}
+/* 以下はラベルのスタイル */
+
+.filters * {
+  display: inline-block;
+}
+.filters label {
+  text-align: center;
+  padding: 0.25rem 0.5rem;
+  font-family:'HG行書体';
+  width:120px;
+  font-size:30px;
+ 
+  line-height: normal;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.filters label:hover {
+  background: #333;
+  color: #fff;
+}
+  mask.hidden{
     display: none;
   }
-  #modal.hidden,#modal2.hidden,#modal3.hidden{
+  #mask.hidden,#mask2.hidden,#mask3.hidden,#mask4.hidden,#mask5.hidden{
+    display: none;
+  }
+  #mask6.hidden,#mask7.hidden,#mask8.hidden,#mask9.hidden,#mask10.hidden{
+    display: none;
+  }
+  #mask11.hidden,#mask12.hidden,#mask13.hidden,#mask14.hidden,#mask15.hidden{
+    display: none;
+  }
+  #mask16.hidden,#mask17.hidden,#mask18.hidden,#mask19.hidden,#mask20.hidden{
+    display: none;
+  }
+  #modal.hidden,#modal2.hidden,#modal3.hidden,#modal4.hidden,#modal5.hidden{
+    transform:translate(-1000px,0) ;
+  }
+  #modal6.hidden,#modal7.hidden,#modal8.hidden,#modal9.hidden,#modal10.hidden{
+    transform:translate(-1000px,0) ;
+  }
+  #modal11.hidden,#modal12.hidden,#modal13.hidden,#modal14.hidden,#modal15.hidden{
+    transform:translate(-1000px,0) ;
+  }
+  #modal16.hidden,#modal17.hidden,#modal18.hidden,#modal19.hidden,#modal20.hidden{
     transform:translate(-1000px,0) ;
   }
 
  .flex{display:flex;
+  flex-wrap: wrap;
 }
   
-.triger{
-  margin-right: 10px;
-  background-image:url(https://free-paper-texture.com/p/p0074/p0074_m.jpg);
-}
-.triger>img {
-  display: flex;
-  width: 250px;
-  height:250px;
-}
+
+
+
+
 @media screen and (max-width :480px){
   .header{ height: 80px;}
   .header h1{font-size:35px;
